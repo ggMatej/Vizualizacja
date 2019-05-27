@@ -8,8 +8,11 @@
 
 <div id="example" class="parcoords"></div>
 <div id="grid"></div>
+<div id="buttons">
+  <button type="button" onclick="funkcijaMoja()">Reset brush!</button>
+</div>
 
-<script id="brushing">
+<script>
   // quantitative colour scale
   var blue_to_brown = d3.scale
     .linear()
@@ -19,6 +22,10 @@
 
   var color = function(d) {
     return blue_to_brown(d["K-D-Diff"]);
+  };
+
+  var funkcijaMoja = function() {
+    location.reload();
   };
 
   var parcoords = d3
